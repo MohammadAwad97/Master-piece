@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+:root {
+  --greenBlue: rgb(37, 109, 131);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --green: rgb(115, 187, 68);
+  --whiteGrey: rgb(243, 243, 243);
+  --footer: rgb(46, 46, 46);
+  --footerText: rgb(176, 176, 176);
+}
+
+:root {
+  --logo: rgb(0, 155, 207);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --gray-black: rgb(51, 51, 51);
+  --pColor: rgb(243, 243, 243);
+}
+
+body {
+  position: relative;
+}
+
+/* Start of header */
+
+.topbtn {
+  --offset: 100px;
+  margin-top: 100vh;
+  padding: 0.6em;
+  position: fixed;
+  z-index: 1001;
+  right: 1.7em;
+  bottom: 118px;
+  background-color: rgb(0, 0, 0);
+}
+
+.topbtn img {
+  width: 20px;
+  height: 20px;
+}
+
+header {
+  /* font-size: 1.1em; */
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: solid rgb(222, 220, 220) 1px;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 40px;
+  padding: 2px;
+  display: none;
+}
+
+.toggle-btn span {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 0.4em;
+  background-color: var(--black);
+}
+
+#check-button {
+  display: none;
+  position: absolute;
+  right: 20px;
+  bottom: 32px;
+}
+
+#check-button:checked ~ nav .list {
+  transform: translateY(0);
+}
+
+#check-button:checked ~ .toggle-btn span:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+  transition: 0.3s ease-in-out;
+}
+
+#check-button:checked ~ .toggle-btn span:nth-child(2) {
+  display: none;
+}
+#check-button:checked ~ .toggle-btn span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  font-size: 0.9em;
+}
+
+nav .logo {
+  background-color: var(--logo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  font-size: 1.3em;
+}
+
+.logo p {
+  padding-left: 1em;
+  color: var(--white);
+  font-weight: 500;
+  margin-top: 0 !important;
+}
+
+nav ul {
+  display: flex;
+  color: var(--black);
+  font-weight: bold;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #7e7e7e;
+}
+
+.Dropdown {
+  display: none;
+}
+
+.last-item:hover .Dropdown {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+  background-color: var(--logo);
+  width: 100%;
+  margin-top: 1em;
+
+  margin-left: -1em;
+}
+
+header .fa-magnifying-glass {
+  padding-right: 1em;
+}
+
+/* End of header */
+
+/* Start of Sec 1:  */
+.sec1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5em 2em !important;
+  background-image: linear-gradient(
+    45deg,
+    rgb(157, 222, 176),
+    rgb(115, 193, 206)
+  );
+  height: 310px;
+}
+
+.divTitle {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5em;
+}
+
+.divTitle > .Saving_h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: rgb(5, 42, 86);
+}
+
+.divImg {
+  height: 275px;
+  width: 45%;
+}
+
+.divImg > .img_head {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.divImg > .img_head:hover {
+  opacity: 90%;
+}
+
+/* Section 2: Who we are */
+.who_We_are {
+  padding: 5em 1em;
+  width: 100%;
+}
+
+.who_We_are > .title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 40%;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.who_We_are > .title > .green_type {
+  width: 50px;
+  height: 3px;
+  background-color: rgb(115, 187, 68);
+}
+
+.who_We_are > .title > .title_Who {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: rgb(5, 42, 86);
+}
+
+.who_We_are > .who_Info {
+  padding-left: 4em;
+  line-height: 2em;
+}
+
+/* start of section 3: */
+
+.solutions {
+  padding: 5em 1em;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+}
+
+.solutions > .title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 40%;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.solutions > .title > .green_type {
+  width: 50px;
+  height: 3px;
+  background-color: rgb(115, 187, 68);
+}
+
+.solutions > .title > .title_Who {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: rgb(5, 42, 86);
+}
+
+.solutions > .solutions_Info {
+  padding-left: 4em;
+  line-height: 2em;
+  margin-bottom: 3em;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_side {
+  padding-left: 4em;
+  width: 40%;
+}
+.left_side > p {
+  margin-bottom: 1em;
+}
+.retilers_tilte {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+
+.retilers_tilte > h1 {
+  font-size: 1.8em;
+  color: rgb(37, 109, 131);
+}
+
+.right_Side {
+  width: 50%;
+}
+
+.right_Side > img {
+  width: 90%;
+}
+
+.footer {
+  background-color: var(--footer);
+  width: 100%;
+  color: var(--footerText);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+.first_row {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 3em;
+}
+
+.first_Part,
+.second_part,
+.third_Part,
+.forth_part {
+  width: 20%;
+}
+
+.first_Part_Title {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.first_Part_TitleH1 {
+  font-size: 1.3em;
+}
+
+.copy {
+  color: var(--footerText);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.second_part {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.second_part > h1 {
+  font-size: 1.3em;
+}
+
+.third_Part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.third_Part > h1 {
+  font-size: 1.3em;
+}
+
+.forth_part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.forth_part > h1 {
+  font-size: 1.3em;
+}
+
+/* Start of responsive */
+
+@media (max-width: 570px) {
+  .toggle-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav .logo {
+    padding-bottom: 1em;
+    font-size: 1.3em;
+  }
+
+  nav .list {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin-top: 3.8em;
+    width: 100%;
+    transform: translateY(-120%);
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  nav .list li {
+    width: 600px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .last-item .Dropdown:hover li {
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+}
